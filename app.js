@@ -6,17 +6,26 @@ let nombreAmigo = '';
 //función para agregar amigos
 function agregarAmigo() {
     nombreAmigo = (document.getElementById('amigo').value).trim();
-    console.log(nombreAmigo);
+    
 
  // Validar amigos
     if (nombreAmigo == '') {
         alert('Ingrese un nombre');  
     } else {
         amigos.push(nombreAmigo);
+
+     }
+
+        console.log(nombreAmigo);
         console.log(amigos);
-    }
 
-    
-    
+        limpiarInput();
 
+    return
+}
+
+//función para limpiar el input
+function limpiarInput() {
+
+    document.querySelector('#amigo').value = ''
 }
